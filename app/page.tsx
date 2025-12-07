@@ -19,18 +19,39 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
+              <div
+                className="w-8 h-8 bg-gradient-to-r   from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90 rounded-lg flex items-center justify-center"
+              >
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+              <span
+                className="text-2xl font-bold bg-gradient-to-r   from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90 bg-clip-text text-transparent"
+              >
                 Pricty
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <Link href="/privacy.html">
+              <Link href="/privacy">
                 <Button variant="ghost">Privacy Policy</Button>
               </Link>
-              <Button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700">
+              <Button
+                className="bg-gradient-to-r   from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90"
+              >
                 Get Started
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
@@ -44,33 +65,58 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div
               className={`text-center transition-all duration-1000 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                isVisible
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-10'
               }`}
             >
-              <div className="inline-flex items-center space-x-2 bg-emerald-50 px-4 py-2 rounded-full mb-6">
-                <Star className="w-4 h-4 text-emerald-600" />
-                <span className="text-sm font-medium text-emerald-700">
+              <div className="inline-flex items-center space-x-2 bg-[#6579cf] px-4 py-2 rounded-full mb-6">
+                <Star className="w-4 h-4 text-white" />
+                <span className="text-sm font-medium text-white">
                   Transform Your Shopify Store
                 </span>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-slate-900 via-emerald-800 to-teal-800 bg-clip-text text-transparent leading-tight">
+              <h1
+                className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r   from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90 bg-clip-text text-transparent leading-tight"
+              >
                 Eye-Catching Price Tags
                 <br />
                 That Convert
               </h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8 leading-relaxed">
-                Add stunning, customizable price blocks to your Shopify theme. Attract attention,
-                increase engagement, and boost your sales with beautiful pricing displays.
+                Add stunning, customizable price blocks to your Shopify theme.
+                Attract attention, increase engagement, and boost your sales
+                with beautiful pricing displays.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-6 text-lg"
+                  // className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-6 text-lg"
+                  className="bg-gradient-to-r   from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90
+  text-white 
+  px-8 
+  py-6 
+  text-lg
+"
                 >
                   Install on Shopify
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button size="lg" variant="outline" className="px-8 py-6 text-lg">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="px-8 py-6 text-lg"
+                >
                   View Demo
                 </Button>
               </div>
@@ -78,7 +124,9 @@ export default function Home() {
 
             <div
               className={`relative transition-all duration-1000 delay-300 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                isVisible
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-10'
               }`}
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
@@ -107,42 +155,63 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-emerald-200">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-6">
+              <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-[#6579cf]">
+                <div
+                  className="w-12 h-12 bg-gradient-to-r   from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90  rounded-xl flex items-center justify-center mb-6"
+                >
                   <Palette className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-slate-900">
                   Fully Customizable
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Choose from dozens of pre-made templates or create your own unique price block
-                  designs that match your brand perfectly.
+                  Choose from dozens of pre-made templates or create your own
+                  unique price block designs that match your brand perfectly.
                 </p>
               </Card>
 
-              <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-emerald-200">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-6">
+              <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-[#6579cf]">
+                <div
+                  className="w-12 h-12 bg-gradient-to-r   from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90  rounded-xl flex items-center justify-center mb-6"
+                >
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-slate-900">
                   Lightning Fast
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Optimized for performance, our price blocks load instantly without slowing down
-                  your store or affecting your SEO.
+                  Optimized for performance, our price blocks load instantly
+                  without slowing down your store or affecting your SEO.
                 </p>
               </Card>
 
-              <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-emerald-200">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-6">
+              <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-[#6579cf] ">
+                <div
+                  className="w-12 h-12 bg-gradient-to-r from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90 rounded-xl flex items-center justify-center mb-6"
+                >
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-slate-900">
                   Boost Conversions
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Eye-catching price displays grab attention and create urgency, leading to higher
-                  click-through rates and more sales.
+                  Eye-catching price displays grab attention and create urgency,
+                  leading to higher click-through rates and more sales.
                 </p>
               </Card>
             </div>
@@ -157,9 +226,9 @@ export default function Home() {
                   Beautiful Price Blocks
                 </h2>
                 <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                  Transform ordinary prices into attention-grabbing visual elements. Our custom
-                  blocks feature animations, badges, and styling options that make your products
-                  impossible to ignore.
+                  Transform ordinary prices into attention-grabbing visual
+                  elements. Our custom blocks feature animations, badges, and
+                  styling options that make your products impossible to ignore.
                 </p>
                 <ul className="space-y-4">
                   {[
@@ -169,8 +238,15 @@ export default function Home() {
                     'Strike-through comparisons',
                   ].map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
-                      <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center">
-                        <div className="w-2 h-2 bg-emerald-600 rounded-full" />
+                      <div className="w-6 h-6 bg-emerald-50 rounded-full flex items-center justify-center">
+                        <div
+                          className="w-2 h-2 bg-gradient-to-r from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90 rounded-full"
+                        />
                       </div>
                       <span className="text-slate-700">{feature}</span>
                     </li>
@@ -205,8 +281,9 @@ export default function Home() {
                   Seamless Integration
                 </h2>
                 <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                  Install in seconds and start customizing immediately. Pricty works with any
-                  Shopify theme and requires no coding knowledge. Just pick your style and go live.
+                  Install in seconds and start customizing immediately. Pricty
+                  works with any Shopify theme and requires no coding knowledge.
+                  Just pick your style and go live.
                 </p>
                 <ul className="space-y-4">
                   {[
@@ -217,7 +294,14 @@ export default function Home() {
                   ].map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center">
-                        <div className="w-2 h-2 bg-teal-600 rounded-full" />
+                        <div
+                          className="w-2 h-2 bg-gradient-to-r from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90 rounded-full"
+                        />
                       </div>
                       <span className="text-slate-700">{feature}</span>
                     </li>
@@ -228,17 +312,30 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-500 to-teal-600">
+        <section
+          className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90"
+        >
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Ready to Transform Your Prices?
             </h2>
             <p className="text-xl text-emerald-50 mb-8">
-              Join hundreds of merchants already using Pricty to boost their conversions
+              Join hundreds of merchants already using Pricty to boost their
+              conversions
             </p>
             <Button
               size="lg"
-              className="bg-white text-emerald-600 hover:bg-emerald-50 px-8 py-6 text-lg font-semibold"
+              className="bg-gradient-to-r from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90 text-white hover:bg-emerald-50 px-8 py-6 text-lg font-semibold"
             >
               Get Started Now
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -247,7 +344,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-slate-900 text-slate-300 py-12 px-4 sm:px-6 lg:px-8">
+      {/* <footer className="bg-slate-900 text-slate-300 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
@@ -295,7 +392,10 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:support@pricty.com" className="hover:text-white transition-colors">
+                  <a
+                    href="mailto:support@pricty.com"
+                    className="hover:text-white transition-colors"
+                  >
                     support@pricty.com
                   </a>
                 </li>
@@ -305,7 +405,10 @@ export default function Home() {
               <h4 className="font-semibold text-white mb-4">Legal</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/privacy.html" className="hover:text-white transition-colors">
+                  <Link
+                    href="/privacy.html"
+                    className="hover:text-white transition-colors"
+                  >
                     Privacy Policy
                   </Link>
                 </li>
@@ -321,7 +424,7 @@ export default function Home() {
             <p>&copy; 2025 Pricty. All rights reserved.</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
