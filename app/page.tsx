@@ -6,9 +6,9 @@ import { ArrowRight, Zap, Palette, TrendingUp, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Logo from '@/components/images/Logo.svg'
-import Integration from "@/components/images/Integration.png";
-import Block from '@/components/images/Block.png'
+import Logo from '../components/images/Logo.svg'
+import Integration from "../components/images/Integration.png";
+import Block from '../components/images/Block.png'
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
