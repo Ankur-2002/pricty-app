@@ -3,8 +3,12 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Zap, Palette, TrendingUp, Star } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Logo from '@/components/images/Logo.svg'
+import Integration from "@/components/images/Integration.png";
+import Block from '@/components/images/Block.png'
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,7 +23,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <div
+              {/* <div
                 className="w-8 h-8 bg-gradient-to-r   from-[#6579cf] 
   via-[#bc6e86] 
   to-[#f08643] 
@@ -38,7 +42,29 @@ export default function Home() {
   hover:to-[#f08643]/90 bg-clip-text text-transparent"
               >
                 Pricty
-              </span>
+              </span> */}
+                <Link href="/" className="flex items-center space-x-2">
+    <Image
+      src={Logo}
+      alt="Pricty Logo"
+      width={140}
+      height={32}
+      priority
+      className="
+        h-8 w-auto 
+        object-contain 
+        transition-opacity duration-300 
+        hover:opacity-90
+      "
+    />
+     <span>
+      <span className="text-xl font-semibold text-black tracking-tight">
+      Pric
+      </span>
+      <span className="text-xl text-black tracking-tight">ty</span>
+    </span>
+  </Link>
+
             </div>
             <div className="flex items-center space-x-4">
               <Link href="/privacy">
@@ -57,6 +83,7 @@ export default function Home() {
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </div>
+            
           </div>
         </div>
       </nav>
@@ -250,10 +277,10 @@ export default function Home() {
               </div>
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                  <img
-                    src="https://images.pexels.com/photos/6214479/pexels-photo-6214479.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  <Image
+                    src={Block}
                     alt="Price Block Examples"
-                    className="w-full h-auto"
+                    className="w-full h-90"
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-64 h-64 bg-gradient-to-br from-teal-300/30 to-emerald-300/30 rounded-full blur-3xl -z-10" />
@@ -263,10 +290,10 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1 relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                  <img
-                    src="https://images.pexels.com/photos/3944454/pexels-photo-3944454.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  <Image
+                    src={Integration}
                     alt="Easy Integration"
-                    className="w-full h-auto"
+                    className="w-full h-90"
                   />
                 </div>
                 <div className="absolute -top-4 -left-4 w-64 h-64 bg-gradient-to-br from-emerald-300/30 to-teal-300/30 rounded-full blur-3xl -z-10" />
