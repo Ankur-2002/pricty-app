@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { ArrowRight, Zap, Palette, TrendingUp, Star } from 'lucide-react';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ArrowRight, Zap, Palette, TrendingUp, Star } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -51,8 +51,9 @@ export default function Home() {
   hover:from-[#6579cf]/90 
   hover:via-[#bc6e86]/90 
   hover:to-[#f08643]/90"
+              onClick={() => window.open("https://apps.shopify.com/pricty") }
               >
-                Get Started
+                Install On Shopify
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </div>
@@ -66,8 +67,8 @@ export default function Home() {
             <div
               className={`text-center transition-all duration-1000 ${
                 isVisible
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-10'
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }`}
             >
               <div className="inline-flex items-center space-x-2 bg-[#6579cf] px-4 py-2 rounded-full mb-6">
@@ -108,16 +109,12 @@ export default function Home() {
   py-6 
   text-lg
 "
+              onClick={() => {
+                window.open("https://apps.shopify.com/pricty")
+              }}
                 >
                   Install on Shopify
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="px-8 py-6 text-lg"
-                >
-                  View Demo
                 </Button>
               </div>
             </div>
@@ -125,8 +122,8 @@ export default function Home() {
             <div
               className={`relative transition-all duration-1000 delay-300 ${
                 isVisible
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-10'
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }`}
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
@@ -147,10 +144,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
-                Why Choose Pricty?
+                Why Pricty Works
               </h2>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                Powerful features designed to make your prices stand out
+                Smart price presentation backed by consumer psychology.
               </p>
             </div>
 
@@ -167,11 +164,12 @@ export default function Home() {
                   <Palette className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-slate-900">
-                  Fully Customizable
+                  Reduces decision friction
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Choose from dozens of pre-made templates or create your own
-                  unique price block designs that match your brand perfectly.
+                  Clear, structured price presentation helps customers
+                  understand value instantly, removing confusion that delays
+                  purchases.
                 </p>
               </Card>
 
@@ -187,11 +185,11 @@ export default function Home() {
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-slate-900">
-                  Lightning Fast
+                  Builds trust through clarity
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Optimized for performance, our price blocks load instantly
-                  without slowing down your store or affecting your SEO.
+                  Clean and consistent pricing visuals create transparency,
+                  making shoppers feel more confident and secure.
                 </p>
               </Card>
 
@@ -207,11 +205,11 @@ export default function Home() {
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-slate-900">
-                  Boost Conversions
+                  Applies buying psychology
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Eye-catching price displays grab attention and create urgency,
-                  leading to higher click-through rates and more sales.
+                  Pricty uses proven visual cues and layout principles to guide
+                  attention, highlight value, and encourage faster decisions.
                 </p>
               </Card>
             </div>
@@ -223,19 +221,16 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
               <div>
                 <h2 className="text-4xl font-bold mb-6 text-slate-900">
-                  Beautiful Price Blocks
+                  Highlight Discounts and Savings
                 </h2>
                 <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                  Transform ordinary prices into attention-grabbing visual
-                  elements. Our custom blocks feature animations, badges, and
-                  styling options that make your products impossible to ignore.
+                  Make every offer instantly clear and compelling.
                 </p>
                 <ul className="space-y-4">
                   {[
-                    'Animated price reveals',
-                    'Sale badge overlays',
-                    'Countdown timers',
-                    'Strike-through comparisons',
+                    "Show savings instantly",
+                    "Emphasise value, not just price",
+                    "Encourage faster decisions",
                   ].map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-emerald-50 rounded-full flex items-center justify-center">
@@ -278,19 +273,16 @@ export default function Home() {
               </div>
               <div className="order-1 md:order-2">
                 <h2 className="text-4xl font-bold mb-6 text-slate-900">
-                  Seamless Integration
+                  Customise Every Detail
                 </h2>
                 <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                  Install in seconds and start customizing immediately. Pricty
-                  works with any Shopify theme and requires no coding knowledge.
-                  Just pick your style and go live.
+                  Your brand, your pricing style.
                 </p>
                 <ul className="space-y-4">
                   {[
-                    'One-click installation',
-                    'Works with all themes',
-                    'Mobile responsive',
-                    'No coding required',
+                    "Match your brand perfectly",
+                    "Control labels and layouts",
+                    "Create a consistent experience",
                   ].map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center">
@@ -336,8 +328,9 @@ export default function Home() {
   hover:from-[#6579cf]/90 
   hover:via-[#bc6e86]/90 
   hover:to-[#f08643]/90 text-white hover:bg-emerald-50 px-8 py-6 text-lg font-semibold"
+            onClick={() => window.open("https://apps.shopify.com/pricty")}
             >
-              Get Started Now
+              Install On Shopify
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
