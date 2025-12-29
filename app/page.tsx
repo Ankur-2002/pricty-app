@@ -9,10 +9,11 @@ import { useEffect, useState } from 'react';
 import Logo from '../images/logo.svg';
 import Block from '../images/Intregration.png';
 import Integration from '../images/Block.png';
+import TickSvg from '@/components/ui/TickSvg';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
-
+  const [isYearly, setIsYearly] = useState(false);
   useEffect(() => {
     setIsVisible(true);
   }, []);
@@ -23,26 +24,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              {/* <div
-                className="w-8 h-8 bg-gradient-to-r   from-[#6579cf] 
-  via-[#bc6e86] 
-  to-[#f08643] 
-  hover:from-[#6579cf]/90 
-  hover:via-[#bc6e86]/90 
-  hover:to-[#f08643]/90 rounded-lg flex items-center justify-center"
-              >
-                <Zap className="w-5 h-5 text-white" />
-              </div>
-              <span
-                className="text-2xl font-bold bg-gradient-to-r   from-[#6579cf] 
-  via-[#bc6e86] 
-  to-[#f08643] 
-  hover:from-[#6579cf]/90 
-  hover:via-[#bc6e86]/90 
-  hover:to-[#f08643]/90 bg-clip-text text-transparent"
-              >
-                Pricty
-              </span> */}
               <Link href="/" className="flex items-center space-x-2">
                 <Image
                   src={Logo}
@@ -68,6 +49,9 @@ export default function Home() {
             <div className="flex items-center space-x-4">
               <Link href="/privacy">
                 <Button variant="ghost">Privacy Policy</Button>
+              </Link>
+              <Link href="#pricing">
+                <Button variant="ghost">Pricing</Button>
               </Link>
               <Button
                 className="bg-gradient-to-r   from-[#6579cf] 
@@ -328,6 +312,142 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Write Pricing Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white" id="pricing">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2
+              className="text-4xl font-bold mb-2 bg-gradient-to-r   from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90 bg-clip-text text-transparent"
+            >
+              Pricing Plan
+            </h2>
+            <p className="text-sm text-slate-600 mb-8">
+              Choose the Plan That Fits Your Needs
+            </p>
+
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <span className="text-sm text-slate-700">Monthly</span>
+              <div
+                className="relative"
+                onClick={() => setIsYearly(prev => !prev)}
+              >
+                <div
+                  className={`w-14 h-8 bg-slate-200 rounded-full flex items-center p-1 cursor-pointer ${
+                    isYearly ? 'justify-end' : 'justify-start'
+                  }
+                  ${
+                    isYearly
+                      ? 'bg-gradient-to-r from-[#6579cf] via-[#bc6e86] to-[#f08643] text-white'
+                      : 'bg-slate-200'
+                  }
+                  `}
+                >
+                  <div className="w-6 h-6 bg-white rounded-full shadow-md transform translate-x-0" />
+                </div>
+                <span className="sr-only">Toggle billing</span>
+              </div>
+              <span className="text-sm text-slate-700">
+                Yearly <span className="text-emerald-500">(Save 17%)</span>
+              </span>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Basic Plan */}
+              <div className="rounded-2xl border border-slate-200 p-8 text-left shadow-sm flex flex-col">
+                <div
+                  className="text-4xl font-bold bg-gradient-to-r   from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90 bg-clip-text text-transparent mb-2"
+                >
+                  Free
+                </div>
+                <h3 className="text-lg font-semibold mb-4">Basic Plan</h3>
+                <ul className="space-y-3 mb-6 text-slate-700 flex-1">
+                  {['Basic price designs/blocks', 'Standard customisation'].map(
+                    (f, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <TickSvg key={'tick_' + i} />
+                        <span className="leading-tight">{f}</span>
+                      </li>
+                    ),
+                  )}
+                </ul>
+                <div className="">
+                  <Button
+                    className="bg-gradient-to-r from-[#6579cf] via-[#bc6e86] to-[#f08643] text-white px-6 py-2 rounded-full"
+                    onClick={() =>
+                      window.open('https://apps.shopify.com/pricty')
+                    }
+                  >
+                    Install
+                  </Button>
+                </div>
+              </div>
+
+              {/* Unlimited Plan - Most Popular */}
+              <div className="relative rounded-2xl p-8 text-left shadow-lg bg-gradient-to-b from-slate-50 to-slate-100 border border-slate-100 flex flex-col">
+                {/* <div className="absolute -top-3 right-6 bg-blue-500 text-white text-xs px-3 py-1 rounded-full">
+                  Most Popular
+                </div> */}
+                <div
+                  className="text-4xl font-bold bg-gradient-to-r   from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90 bg-clip-text text-transparent mb-2"
+                >
+                  {isYearly ? '$50' : '$5'}
+                  <span className="text-base font-medium text-slate-500">
+                    /month
+                  </span>
+                </div>
+                <h3 className="text-lg font-semibold mb-4">Pro Plan</h3>
+                <ul className="space-y-3 mb-6 text-slate-700 flex-1">
+                  {[
+                    'All premium price designs/blocks',
+                    'Advanced customisation options',
+                    'Priority support',
+                  ].map((f, i) => (
+                    <li key={i} className="flex items-start gap-3 items-center">
+                      <TickSvg key={'tick_' + i} />
+                      <span className="leading-tight">
+                        {f.includes('coming soon') ? (
+                          <>
+                            <span>{f.replace('(coming soon)', '')}</span>{' '}
+                            <span className="text-sm text-amber-500">
+                              (coming soon)
+                            </span>
+                          </>
+                        ) : (
+                          f
+                        )}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="">
+                  <Button
+                    className="bg-gradient-to-r from-[#6579cf] via-[#bc6e86] to-[#f08643] text-white px-6 py-2 rounded-full"
+                    onClick={() =>
+                      window.open('https://apps.shopify.com/pricty')
+                    }
+                  >
+                    Install
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
