@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ArrowRight, Zap, Palette, TrendingUp, Star } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import Logo from '@/images/Logo.svg'
-import Integration from "@/images/Integration.png";
-import Block from '@/images/Block.png'
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { ArrowRight, Zap, Palette, TrendingUp, Star } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import Logo from '../images/logo.svg';
+import Block from '../images/Intregration.png';
+import Integration from '../images/Block.png';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,28 +43,27 @@ export default function Home() {
               >
                 Pricty
               </span> */}
-                <Link href="/" className="flex items-center space-x-2">
-    <Image
-      src={Logo}
-      alt="Pricty Logo"
-      width={140}
-      height={32}
-      priority
-      className="
+              <Link href="/" className="flex items-center space-x-2">
+                <Image
+                  src={Logo}
+                  alt="Pricty Logo"
+                  width={140}
+                  height={32}
+                  priority
+                  className="
         h-8 w-auto 
         object-contain 
         transition-opacity duration-300 
         hover:opacity-90
       "
-    />
-     <span>
-      <span className="text-xl font-semibold text-black tracking-tight">
-      Pric
-      </span>
-      <span className="text-xl text-black tracking-tight">ty</span>
-    </span>
-  </Link>
-
+                />
+                <span>
+                  <span className="text-xl font-semibold text-black tracking-tight">
+                    Pric
+                  </span>
+                  <span className="text-xl text-black tracking-tight">ty</span>
+                </span>
+              </Link>
             </div>
             <div className="flex items-center space-x-4">
               <Link href="/privacy">
@@ -77,13 +76,12 @@ export default function Home() {
   hover:from-[#6579cf]/90 
   hover:via-[#bc6e86]/90 
   hover:to-[#f08643]/90"
-              onClick={() => window.open("https://apps.shopify.com/pricty") }
+                onClick={() => window.open('https://apps.shopify.com/pricty')}
               >
                 Install On Shopify
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </div>
-            
           </div>
         </div>
       </nav>
@@ -94,8 +92,8 @@ export default function Home() {
             <div
               className={`text-center transition-all duration-1000 ${
                 isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-10'
               }`}
             >
               <div className="inline-flex items-center space-x-2 bg-[#6579cf] px-4 py-2 rounded-full mb-6">
@@ -136,9 +134,9 @@ export default function Home() {
   py-6 
   text-lg
 "
-              onClick={() => {
-                window.open("https://apps.shopify.com/pricty")
-              }}
+                  onClick={() => {
+                    window.open('https://apps.shopify.com/pricty');
+                  }}
                 >
                   Install on Shopify
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -149,8 +147,8 @@ export default function Home() {
             <div
               className={`relative transition-all duration-1000 delay-300 ${
                 isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-10'
               }`}
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
@@ -255,9 +253,9 @@ export default function Home() {
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "Show savings instantly",
-                    "Emphasise value, not just price",
-                    "Encourage faster decisions",
+                    'Show savings instantly',
+                    'Emphasise value, not just price',
+                    'Encourage faster decisions',
                   ].map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-emerald-50 rounded-full flex items-center justify-center">
@@ -281,6 +279,8 @@ export default function Home() {
                     src={Block}
                     alt="Price Block Examples"
                     className="w-full h-90"
+                    width={100}
+                    height={100}
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-64 h-64 bg-gradient-to-br from-teal-300/30 to-emerald-300/30 rounded-full blur-3xl -z-10" />
@@ -294,6 +294,8 @@ export default function Home() {
                     src={Integration}
                     alt="Easy Integration"
                     className="w-full h-90"
+                    width={100}
+                    height={100}
                   />
                 </div>
                 <div className="absolute -top-4 -left-4 w-64 h-64 bg-gradient-to-br from-emerald-300/30 to-teal-300/30 rounded-full blur-3xl -z-10" />
@@ -307,9 +309,9 @@ export default function Home() {
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "Match your brand perfectly",
-                    "Control labels and layouts",
-                    "Create a consistent experience",
+                    'Match your brand perfectly',
+                    'Control labels and layouts',
+                    'Create a consistent experience',
                   ].map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center">
@@ -355,7 +357,7 @@ export default function Home() {
   hover:from-[#6579cf]/90 
   hover:via-[#bc6e86]/90 
   hover:to-[#f08643]/90 text-white hover:bg-emerald-50 px-8 py-6 text-lg font-semibold"
-            onClick={() => window.open("https://apps.shopify.com/pricty")}
+              onClick={() => window.open('https://apps.shopify.com/pricty')}
             >
               Install On Shopify
               <ArrowRight className="ml-2 w-5 h-5" />
