@@ -2,7 +2,15 @@
 
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowRight, Zap, Palette, TrendingUp, Star } from 'lucide-react';
+import {
+  ArrowRight,
+  Zap,
+  Palette,
+  TrendingUp,
+  Star,
+  Menu,
+  X,
+} from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -14,6 +22,7 @@ import TickSvg from '@/components/ui/TickSvg';
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [isYearly, setIsYearly] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     setIsVisible(true);
   }, []);
@@ -22,7 +31,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <nav className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-16 relative">
             <div className="flex items-center space-x-2">
               <Link href="/" className="flex items-center space-x-2">
                 <Image
@@ -46,25 +55,101 @@ export default function Home() {
                 </span>
               </Link>
             </div>
-            <div className="flex items-center space-x-4">
-              <Link href="/privacy">
-                <Button variant="ghost">Privacy Policy</Button>
-              </Link>
-              <Link href="#pricing">
-                <Button variant="ghost">Pricing</Button>
-              </Link>
-              <Button
-                className="bg-gradient-to-r   from-[#6579cf] 
+
+            <div className="flex items-center">
+              {/* Desktop links */}
+              <div className="hidden md:flex items-center space-x-4">
+                <Link href="/privacy">
+                  <Button variant="ghost">Privacy Policy</Button>
+                </Link>
+                <Link href="#home">
+                  <Button variant="ghost">Home</Button>
+                </Link>
+                <Link href="#pricing">
+                  <Button variant="ghost">Pricing</Button>
+                </Link>
+                <Link href="/faqs">
+                  <Button variant="ghost">FAQs</Button>
+                </Link>
+                <Link href="#contact">
+                  <Button variant="ghost">Contact Us</Button>
+                </Link>
+                <Button
+                  className="bg-gradient-to-r   from-[#6579cf] 
   via-[#bc6e86] 
   to-[#f08643] 
   hover:from-[#6579cf]/90 
   hover:via-[#bc6e86]/90 
   hover:to-[#f08643]/90"
-                onClick={() => window.open('https://apps.shopify.com/pricty')}
-              >
-                Install On Shopify
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+                  onClick={() => window.open('https://apps.shopify.com/pricty')}
+                >
+                  Install On Shopify
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </div>
+
+              {/* Mobile hamburger */}
+              <div className="md:hidden ml-2">
+                <button
+                  aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+                  onClick={() => setMenuOpen(prev => !prev)}
+                  className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6579cf]"
+                >
+                  {menuOpen ? (
+                    <X className="w-6 h-6" />
+                  ) : (
+                    <Menu className="w-6 h-6" />
+                  )}
+                </button>
+              </div>
+            </div>
+
+            {/* Mobile dropdown - shown only on small screens when open */}
+            <div
+              className={`md:hidden ${
+                menuOpen ? 'block' : 'hidden'
+              } bg-white border-t border-slate-200
+              absolute top-full left-0 w-full shadow-md
+              `}
+            >
+              <div className="px-4 pt-4 pb-6 space-y-2">
+                <Link href="/privacy" onClick={() => setMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">
+                    Privacy Policy
+                  </Button>
+                </Link>
+                <Link href="#home" onClick={() => setMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">
+                    Home
+                  </Button>
+                </Link>
+                <Link href="#pricing" onClick={() => setMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">
+                    Pricing
+                  </Button>
+                </Link>
+                <Link href="/faqs" onClick={() => setMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">
+                    FAQs
+                  </Button>
+                </Link>
+                <Link href="#contact" onClick={() => setMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">
+                    Contact Us
+                  </Button>
+                </Link>
+                <div className="pt-2">
+                  <Button
+                    className="w-full bg-gradient-to-r from-[#6579cf] via-[#bc6e86] to-[#f08643] text-white px-6 py-2 rounded-full"
+                    onClick={() => {
+                      setMenuOpen(false);
+                      window.open('https://apps.shopify.com/pricty');
+                    }}
+                  >
+                    Install On Shopify
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -371,7 +456,10 @@ export default function Home() {
   hover:via-[#bc6e86]/90 
   hover:to-[#f08643]/90 bg-clip-text text-transparent mb-2"
                 >
-                  Free
+                  $0
+                  <span className="text-base font-medium text-slate-500">
+                    /month
+                  </span>
                 </div>
                 <h3 className="text-lg font-semibold mb-4">Basic Plan</h3>
                 <ul className="space-y-3 mb-6 text-slate-700 flex-1">
