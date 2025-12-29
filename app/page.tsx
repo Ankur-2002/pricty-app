@@ -577,13 +577,7 @@ export default function Home() {
         </section>
 
         <section
-          className="py-6 px-4 sm:px-6 lg:px-8 bg-slate-50 
-             bg-gradient-to-r from-[#6579cf] 
-  via-[#bc6e86] 
-  to-[#f08643] 
-  hover:from-[#6579cf]/90 
-  hover:via-[#bc6e86]/90 
-  hover:to-[#f08643]/90"
+          className="py-6 px-4 sm:px-6 lg:px-8 bg-[#6579cf]"
           id="copyright"
         >
           <div className="max-w-7xl mx-auto text-center text-sm text-white">
