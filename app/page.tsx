@@ -18,6 +18,19 @@ import Logo from '../images/logo.svg';
 import Block from '../images/Intregration.png';
 import Integration from '../images/Block.png';
 import TickSvg from '@/components/ui/TickSvg';
+import AnimatedCarousel from '@/components/ui/animated-carousel';
+import Caro1 from '../images/Caro1.png';
+import Caro2 from '../images/Caro2.png';
+import Caro3 from '../images/Caro3.png';
+import Caro4 from '../images/Caro4.png';
+import Caro5 from '../images/Caro5.png';
+import Caro6 from '../images/Caro6.png';
+import Caro7 from '../images/Caro7.png';
+import Caro8 from '../images/Caro8.png';
+import Caro9 from '../images/Caro9.png';
+import Caro10 from '../images/Caro10.png';
+import Caro11 from '../images/Caro11.png';
+import Caro12 from '../images/Caro12.png';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -156,7 +169,7 @@ export default function Home() {
       </nav>
 
       <main>
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-0 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div
               className={`text-center transition-all duration-1000 ${
@@ -168,7 +181,7 @@ export default function Home() {
               <div className="inline-flex items-center space-x-2 bg-[#6579cf] px-4 py-2 rounded-full mb-6">
                 <Star className="w-4 h-4 text-white" />
                 <span className="text-sm font-medium text-white">
-                  Transform Your Shopify Store
+                  Boost Your Sales Today!
                 </span>
               </div>
               <h1
@@ -212,28 +225,16 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-
-            <div
-              className={`relative transition-all duration-1000 delay-300 ${
-                isVisible
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-10'
-              }`}
-            >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
-                <img
-                  src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                  alt="Pricty Dashboard"
-                  className="w-full h-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent" />
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-72 h-72 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-full blur-3xl" />
-              <div className="absolute -top-6 -left-6 w-72 h-72 bg-gradient-to-br from-teal-400/20 to-emerald-400/20 rounded-full blur-3xl" />
+          </div>
+        </section>
+        {/* Animated image-only infinite carousel */}
+        <section className="py-0 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className=" overflow-hidden">
+              <AnimatedCarousel />
             </div>
           </div>
         </section>
-
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
