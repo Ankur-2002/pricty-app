@@ -59,9 +59,6 @@ export default function Home() {
             <div className="flex items-center">
               {/* Desktop links */}
               <div className="hidden md:flex items-center space-x-4">
-                <Link href="/privacy">
-                  <Button variant="ghost">Privacy Policy</Button>
-                </Link>
                 <Link href="#home">
                   <Button variant="ghost">Home</Button>
                 </Link>
@@ -73,6 +70,9 @@ export default function Home() {
                 </Link>
                 <Link href="#contact">
                   <Button variant="ghost">Contact Us</Button>
+                </Link>
+                <Link href="/privacy">
+                  <Button variant="ghost">Privacy Policy</Button>
                 </Link>
                 <Button
                   className="bg-gradient-to-r   from-[#6579cf] 
@@ -461,7 +461,7 @@ export default function Home() {
                     /month
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold mb-4">Basic Plan</h3>
+                <h3 className="text-lg font-semibold mb-4">Free Plan</h3>
                 <ul className="space-y-3 mb-6 text-slate-700 flex-1">
                   {['Basic price designs/blocks', 'Standard customisation'].map(
                     (f, i) => (
@@ -541,22 +541,36 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#6579cf] 
+        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
+          <div
+            className="
+             bg-gradient-to-r from-[#6579cf] 
   via-[#bc6e86] 
   to-[#f08643] 
   hover:from-[#6579cf]/90 
   hover:via-[#bc6e86]/90 
-  hover:to-[#f08643]/90"
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Ready to Transform Your Prices?
-            </h2>
-            <p className="text-xl text-emerald-50 mb-8">
-              Join hundreds of merchants already using Pricty to boost their
-              conversions
-            </p>
+  hover:to-[#f08643]/90
+            max-w-7xl
+             mx-auto flex
+  md:flex-row
+  flex-col
+  items-center
+  justify-between
+  gap-4
+  px-6
+  py-12
+  rounded-3xl
+  shadow-2xl
+  "
+          >
+            <div className="w-full">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Convert Price Attention Into Sales
+              </h2>
+              <p className="text-xl text-emerald-50 mb-8">
+                Clear prices. Confident customers. Better conversions.
+              </p>
+            </div>
             <Button
               size="lg"
               className="bg-gradient-to-r from-[#6579cf] 
@@ -572,89 +586,23 @@ export default function Home() {
             </Button>
           </div>
         </section>
-      </main>
 
-      {/* <footer className="bg-slate-900 text-slate-300 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-white" />
-                </div>
-                <span className="text-xl font-bold text-white">Pricty</span>
-              </div>
-              <p className="text-sm">
-                Beautiful price blocks for your Shopify store.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold text-white mb-4">Product</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Pricing
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Demo
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-white mb-4">Support</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:support@pricty.com"
-                    className="hover:text-white transition-colors"
-                  >
-                    support@pricty.com
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-white mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link
-                    href="/privacy.html"
-                    className="hover:text-white transition-colors"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Terms of Service
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <section
+          className="py-6 px-4 sm:px-6 lg:px-8 bg-slate-50 
+             bg-gradient-to-r from-[#6579cf] 
+  via-[#bc6e86] 
+  to-[#f08643] 
+  hover:from-[#6579cf]/90 
+  hover:via-[#bc6e86]/90 
+  hover:to-[#f08643]/90"
+          id="copyright"
+        >
+          <div className="max-w-7xl mx-auto text-center text-sm text-white">
+            &copy; {new Date().getFullYear()} Pricty. All rights reserved. Made
+            with ❤️ for merchants worldwide.
           </div>
-          <div className="border-t border-slate-800 pt-8 text-center text-sm">
-            <p>&copy; 2025 Pricty. All rights reserved.</p>
-          </div>
-        </div>
-      </footer> */}
+        </section>
+      </main>
     </div>
   );
 }
